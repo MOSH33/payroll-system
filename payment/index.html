@@ -1,0 +1,156 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="contact-form">
+    <div>
+      <h1>UNIQUE HOME INTERIORS</h1>
+      <h4>Payroll Web Application</h4>
+    </div>
+
+    <form name="myForm" method="post" onsubmit="return validateForm()">
+      <h6>Bio Data</h6>
+      <div class="grid-container">
+        <div>
+          <label for="empName">
+            <span class="required">Name: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="empName" name="empName" value="" placeholder="Name"
+              autofocus="autofocus" />
+          </label>
+        </div>
+        <div>
+          <label for="rank">
+            <span class="required">Rank:</span>
+            <input type="text" id="rank" grid-column="1/4" grid-row="2" name="rank" value="" placeholder="Rank" />
+          </label>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div>
+          <label for="email">
+            <span class="required">Email: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="email" name="email" value="" placeholder="Email"
+              autofocus="autofocus" />
+          </label>
+        </div>
+        <div>
+          <label for="phone">
+            <span class="required">Phone Number: </span>
+            <input type="text" id="phone" grid-column="1/4" grid-row="2" name="phone" value=""
+              placeholder="Your Phone Number" />
+          </label>
+        </div>
+      </div>
+
+      <h6>Basic Pay</h6>
+      <div>
+        <label for="basic_pay">
+          <span class="required">Basic Pay: </span>
+          <input oninput="myAllowances()" type="text" grid-column="1/4" grid-row="1" id="basic_pay" name="basic_pay" value=""
+            placeholder="Basic Pay" />
+        </label>
+      </div>
+
+      <div class="grid-container">
+        <div>
+          <label for="overtime">
+            <span class="required">Overtime: </span>
+            <input oninput="myOvertime()" type="text" grid-column="1/4" grid-row="1" id="overtime" name="overtime" value=""
+              placeholder="Overtime" />
+          </label>
+        </div>
+        <div>
+          <label for="overtime_pay">
+            <span class="required">Overtime Pay:</span>
+            <input type="text" id="overtime_pay" grid-column="1/4" grid-row="2" name="overtime_pay" value=""
+              placeholder="Overtime Pay" readonly />
+          </label>
+        </div>
+      </div>
+
+      <!-- <h6>Allowances</h6> -->
+      <div class="grid-container">
+        <div>
+          <h6>Allowances</h6>
+          <label for="housing">
+            <span class="required">Housing: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="housing" name="housing" value=""
+              placeholder="Housing" readonly/>
+          </label>
+
+          <label for="transport">
+            <span class="required">Transport: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="transport" name="transport" value=""
+              placeholder="Transport" readonly/>
+          </label>
+
+          <label for="medical">
+            <span class="required">Medical: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="medical" name="medical" value=""
+              placeholder="Medical" readonly/>
+          </label>
+
+          <label for="allowance_total">
+            <span class="required">Total: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="allowance_total" name="allowance_total" value=""
+              placeholder="Total" readonly />
+          </label>
+        </div>
+
+        <div>
+          <h6>Deductions</h6>
+          <label for="nssf">
+            <span class="required">NSSF: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="nssf" name="nssf" value="" placeholder="NSSF" />
+          </label>
+
+          <label for="paye">
+            <span class="required">PAYE: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="paye" name="paye" value="" placeholder="PAYE" />
+          </label>
+
+          <label for="total_deductions">
+            <span class="required">Total: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="total_deductions" name="total_deductions" value=""
+              placeholder="Total" readonly />
+          </label>
+
+          <label for="gross_pay">
+            <span class="required">Gross Pay: </span>
+            <input type="text" grid-column="1/4" grid-row="1" id="gross_pay" name="gross_pay" value=""
+              placeholder="Gross Pay" readonly />
+          </label>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div>
+        </div>
+        <div>
+          <label for="net_pay">
+            <span class="required">Net Pay:</span>
+            <input type="text" id="net_pay" grid-column="1/4" grid-row="2" name="net_pay" value=""
+              placeholder="Overtime Pay" readonly />
+          </label>
+        </div>
+      </div>
+
+      <div>
+          <button name="submit" type="submit" id="submit">COMPUTE DEDUCTIONS</button>
+        </div>
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
